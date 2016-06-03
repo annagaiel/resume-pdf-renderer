@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get '/', to: 'pdfs#index'
+  get '/:id', to: 'pdfs#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
