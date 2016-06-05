@@ -18,7 +18,7 @@ class Student
   end
 
   def self.find(id)
-    student_hash = Unirest.get("http://localhost:3000/api/v1/students/#{id}.json")
+    student_hash = Unirest.get("#{ENV['DOMAIN']}/students/#{id}.json")
     return Student.new(student_hash)
   end
 
